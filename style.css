@@ -8,6 +8,8 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -78,7 +80,6 @@ button {
 
 .equals:hover, .operator:hover{
   background-color: rgba(255, 149, 0, 0.8);
-  /* color: black; */
 }
 
 .digit:hover, .clear:hover, .delete:hover {
@@ -86,12 +87,8 @@ button {
 }
 
 .outerDisplay {
-  padding-top: 15px;
+  padding-top: 0.75rem;
   color: #505050;
-}
-
-.display {
-  padding-top: 5px;
 }
 
 .delete {
