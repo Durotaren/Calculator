@@ -5,6 +5,11 @@
   font-weight: normal;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background: linear-gradient(to right, #FF9500, rgb(241, 241, 112));
   margin: 0;
@@ -93,4 +98,8 @@ button {
   margin-left: 4px;
   background-color: #797979;
   width: 120px;
+}
+
+.clear {
+  text-align: center;
 }
