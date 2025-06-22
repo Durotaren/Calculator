@@ -83,6 +83,9 @@ document.querySelectorAll('.operator').forEach(button => {button.addEventListene
   }
   if (operationDone) {
     numberOne = display.textContent;
+    if (numberOne === '') {
+      return;
+    }
     numberTwo = '';
     operator = button.textContent;
     isClicked = true;
@@ -98,7 +101,8 @@ document.querySelectorAll('.operator').forEach(button => {button.addEventListene
       scrollToRight();
       return;
     }
-    result = (result % 1 !== 0 && result.toString().split('.')[1].length > 2) ? Number(result.toFixed(2)) : result;    display.textContent = result;
+    result = (result % 1 !== 0 && result.toString().split('.')[1].length > 2) ? Number(result.toFixed(2)) : result;
+    display.textContent = result;
     numberOne = result;
     numberTwo = '';
   }
@@ -203,6 +207,9 @@ document.addEventListener('keydown', (event) => {
       }
       if (operationDone) {
       numberOne = display.textContent;
+      if (numberOne === '') {
+        return;
+      }
       numberTwo = '';
       operator = key;
       isClicked = true;
@@ -222,6 +229,9 @@ document.addEventListener('keydown', (event) => {
       display.textContent = result;
       numberOne = result;
       numberTwo = '';
+      }
+      if (numberOne === '') {
+        return;
       }
       isClicked = true;
       operator = key;
