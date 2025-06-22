@@ -94,9 +94,21 @@ button {
 .delete {
   margin-left: 4px;
   background-color: #797979;
-  width: 120px;
+}
+
+.delete svg {
+  width: 32px;
+  height: 28px;
 }
 
 .clear {
   text-align: center;
+}
+
+.display::-webkit-scrollbar {
+  display: none;
+}
+
+.outerDisplay::-webkit-scrollbar {
+  display: none;
 }

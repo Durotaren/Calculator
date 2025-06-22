@@ -78,7 +78,7 @@ digits.forEach(button => {button.addEventListener('click', () => {
 })})
 
 document.querySelectorAll('.operator').forEach(button => {button.addEventListener('click', () => {
-  if (display.textContent === 'Error') {
+  if (display.textContent === 'Error' || numberOne === '') {
     return;
   }
   if (operationDone) {
@@ -198,7 +198,7 @@ document.addEventListener('keydown', (event) => {
     }
     scrollToRight();
   } else if (['+', '-', '*', '/'].includes(key)) {
-      if (display.textContent === 'Error') {
+      if (display.textContent === 'Error' || numberOne === '') {
         return;
       }
       if (operationDone) {
